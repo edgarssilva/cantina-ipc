@@ -1,0 +1,16 @@
+{
+  "name": "cantina-ipc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": "true",
+  "scripts": {
+    "postinstall": "cd ./packages/client && expo-yarn-workspaces postinstall"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "author": "Edgar Silva, Rodrigo Carreira, Jorge Martins",
+  "license": "MIT"
+}
