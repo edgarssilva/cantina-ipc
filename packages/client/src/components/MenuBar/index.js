@@ -1,14 +1,13 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
 
-import { Container, IPCLogo } from './styles';
-
-import IPCsource from '../../../assets/ipclogo.png';
+import { Container, IPCLogo, MenuIcon } from './styles';
+import IPCsource from '../../assets/ipclogo.png';
 
 const MenuBar = () => {
   return (
     <Container>
-      <Text>This is the title</Text>
+      <MenuIcon color='#282828' size={40} />
       <IPCLogo source={IPCsource} />
     </Container>
   );
