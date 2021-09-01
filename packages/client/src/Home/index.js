@@ -1,16 +1,23 @@
-import React from 'react';
-import { Text, Button } from 'react-native';
-
-import { Container } from './styles';
+import React from "react";
+import { Image, Text, Button } from "react-native";
+import ipcLogo from "../../assets/104938.png";
+import { Container, IpcLogo } from "./styles";
 
 const Home = ({ navigation }) => {
   return (
     <Container>
-      <Text>This is the Home Screen!!!</Text>
+      <IpcLogo
+        source={ipcLogo}
+        style={{
+          height: 200,
+          width: 200,
+          resizeMode: "contain",
+        }}
+      />
       <Button
-        title='Go to Login'
+        title="Reservar"
         onPress={() => {
-          navigation.navigate('Login');
+          navigation.navigate("Login");
         }}
       />
     </Container>
