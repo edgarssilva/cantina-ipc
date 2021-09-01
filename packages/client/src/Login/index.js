@@ -6,7 +6,7 @@ import { Container } from './styles';
 const Login = () => {
   return (
     <Container>
-      <Text>Você é um homem honesto!</Text>
+      <Text>This is the Login Screen!</Text>
     </Container>
   );
 };
