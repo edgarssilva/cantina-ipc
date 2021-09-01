@@ -1,7 +1,7 @@
-import React from "react";
-import ipcLogo from "../../assets/104938.png";
-import Button from "../components/Button";
-import { Container, IpcLogo } from "./styles";
+import React from 'react';
+import ipcLogo from '../../assets/ipclogo.png';
+import Button from '../components/Button';
+import { Container, IpcLogo } from './styles';
 
 const Home = ({ navigation }) => {
   return (
@@ -11,10 +11,10 @@ const Home = ({ navigation }) => {
         style={{
           height: 200,
           width: 200,
-          resizeMode: "contain",
+          resizeMode: 'contain',
         }}
       />
-      <Button text="Reservar" />
+      <Button text='Reservar' />
     </Container>
   );
 };
