@@ -1,6 +1,7 @@
 import React from "react";
-import { Image, Text, Button } from "react-native";
+import { Image, Text } from "react-native";
 import ipcLogo from "../../assets/104938.png";
+import Button from "../components/Button";
 import { Container, IpcLogo } from "./styles";
 
 const Home = ({ navigation }) => {
@@ -14,12 +15,7 @@ const Home = ({ navigation }) => {
           resizeMode: "contain",
         }}
       />
-      <Button
-        title="Reservar"
-        onPress={() => {
-          navigation.navigate("Login");
-        }}
-      />
+      <Button text="Reservar" />
     </Container>
   );
 };
