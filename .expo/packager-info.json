@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
   "expoServerPort": null,
-  "packagerPort": null,
+  "packagerPort": 19000,
   "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
+  "expoServerNgrokUrl": "https://sz-yw8.anonymous.cantina-ipc.exp.direct",
+  "packagerNgrokUrl": "https://packager.sz-yw8.anonymous.cantina-ipc.exp.direct",
+  "ngrokPid": 37728,
   "webpackServerPort": null
 }
