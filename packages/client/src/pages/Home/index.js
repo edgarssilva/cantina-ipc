@@ -5,7 +5,7 @@ import { Container } from './styles';
 const Home = ({ navigation }) => {
   return (
     <Container>
-      <Button text='Reservar' fontSize='25px' />
+      <Button onPress={() => navigation.navigate('Login')} text='Reservar' fontSize='24px' />
     </Container>
   );
 };

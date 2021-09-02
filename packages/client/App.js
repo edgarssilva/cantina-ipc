@@ -18,7 +18,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Routes />
-      <StatusBar backgroundColor='white' />
+      <StatusBar backgroundColor='white' translucent={false} />
     </NavigationContainer>
   );
 }

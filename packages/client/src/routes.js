@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { View } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Home from './pages/Home';
@@ -10,14 +10,17 @@ const Stack = createNativeStackNavigator();
 
 const Routes = () => {
   return (
-    <Stack.Navigator
-      screenOptions={{
-        headerTitle: (props) => <MenuBar {...props} />,
-      }}
-    >
-      <Stack.Screen name='Home' component={Home} />
-      <Stack.Screen name='Login' component={Login} />
-    </Stack.Navigator>
+    <>
+      <MenuBar />
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <Stack.Screen name='Home' component={Home} />
+        <Stack.Screen name='Login' component={Login} />
+      </Stack.Navigator>
+    </>
   );
 };
 

@@ -1,14 +1,20 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-  flex: 1;
+  align-items: center;
+  position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 `;
 
 export const IPCLogo = styled.Image`
-  flex: 3;
+  height: 60px;
   resize-mode: contain;
+`;
+
+export const HamburgerContainer = styled.View`
+  left: 10px;
+  position: absolute;
 `;
