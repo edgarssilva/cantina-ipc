@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View``;
 
-export const ButtonContainer = styled.TouchableOpacity`
+export const ButtonContainer = styled.TouchableHighlight`
   display: flex;
   flex-direction: column;
   justify-content: center;
