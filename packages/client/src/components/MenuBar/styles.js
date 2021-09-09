@@ -15,6 +15,6 @@ export const IPCLogo = styled.Image`
 `;
 
 export const HamburgerContainer = styled.View`
-  left: 10px;
+  left: 20px;
   position: absolute;
 `;
