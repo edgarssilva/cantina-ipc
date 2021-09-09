@@ -1,54 +1,35 @@
 import styled from 'styled-components/native';
 
-export const MainContainer = styled.View`
-    flex:1;
-    flex-direction: column;
+export const Container = styled.View`
+  flex: 1;
+  flex-direction: column;
+
+  margin-bottom: 10px;
 `;
 
-export const TypeContainer = styled.View`
-    display:flex;
-    flex-direction: row;
-    margin-bottom: 10px;
+export const Header = styled.View`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-end;
 `;
 
-export const ProdContainer = styled.View`
-    display: flex;
-    flex-direction: row;
-`;
-
-export const AlContainer = styled.View`
-    display: flex;
-    flex-direction: row;
-`;
-
-export const PlateTitle = styled.Text`
+export const Title = styled.Text`
   font-family: 'Inter_700Bold';
-  font-size: 32px;
+  font-size: 26px;
+  margin-right: 5px;
 `;
 
-export const Type = styled.Text`
-  font-family: 'Inter_700Bold';
-  font-size: 22px;
-
+export const Category = styled.Text`
+  font-family: Inter_600SemiBold;
+  color: #4d4d4d;
 `;
 
-export const PlateType = styled.Text`
-color: #DA1A00;
-font-family: Inter_700Bold;
-font-size: 22px;
-margin-left: 3px;
+export const Description = styled.Text`
+  font-family: Inter_400Regular;
+  color: #4d4d4d;
+
+  margin: 1px 0;
 `;
-
-export const ProductIn = styled.Text`
-    font-family: Inter_600SemiBold;
-    color: #4D4D4D;
-`;
-
-export const TextProducts = styled.Text`
-    font-family: Inter_400Regular;
-    color: #4D4D4D;
-    
-`;
-
-
-
