@@ -44,6 +44,7 @@ const plates = [
 const Home = ({ navigation }) => {
   return (
     <Container>
+      <StatusBar backgroundColor='white' style='dark' />
       <PlateList>
         {plates.map((p) => (
           <Plate key={p.id} plate={p} />
