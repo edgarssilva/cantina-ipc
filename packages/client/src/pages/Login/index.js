@@ -51,7 +51,13 @@ const Login = ({ navigation }) => {
               />
             </InputContainer>
             <View>
-              <Button text='Entrar' fontSize='24px' />
+              <Button
+                text='Entrar'
+                fontSize='24px'
+                onPress={() => {
+                  navigation.navigate('Home');
+                }}
+              />
             </View>
           </Main>
         </View>
