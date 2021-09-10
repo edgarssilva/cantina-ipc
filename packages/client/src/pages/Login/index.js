@@ -1,53 +1,60 @@
-import React from "react";
-import { Text, View, KeyboardAvoidingView } from "react-native";
+import React from 'react';
+import { StatusBar } from 'expo-status-bar';
+import { Image, Text, View, KeyboardAvoidingView } from 'react-native';
 
-import { Container, IPCLogo, Container2, LogoContainer } from "./styles";
-import Input from "../../components/Input";
-import Button from "../../components/Button";
-import IPCsource from "../../assets/whiteLogoIpc1.png";
-import IPClogo from "../../assets/whiteLogoIpc2.png";
+import { Container, LogoContainer, Main, InputContainer, PreTitle, Title } from './styles';
+
+import Input from '../../components/Input';
+import Button from '../../components/Button';
+import IPCsource from '../../assets/ipclogo_white.png';
 
 const Login = ({ navigation }) => {
   return (
     <Container>
+      <StatusBar backgroundColor='#525ea6' style='light' />
       <KeyboardAvoidingView
         style={{ flex: 1 }}
-        behavior={Platform.OS == "ios" ? "padding" : "height"}
+        behavior={Platform.OS == 'ios' ? 'padding' : 'height'}
+        keyboardVerticalOffset={9}
       >
-        {/*Primeira Div para a parte superior onde vai estar o Logo e em Branco*/}
-        <LogoContainer>
-          <IPCLogo source={IPCsource} />
-          <IPCLogo source={IPClogo} style={{ marginLeft: 15 }} />
-        </LogoContainer>
-        <Container2>
-          {/*Segunda View onde vao os inputs e o botao*/}
-          <View style={{ alignItems: "baseline" }}>
-            <Text style={{ fontSize: 24, fontFamily: "Inter_600SemiBold" }}>
-              {"Bem-vindo a"}
-            </Text>
-            <Text style={{ fontSize: 42, fontFamily: "Inter_600SemiBold" }}>
-              {"Cantinas IPC"}
-            </Text>
-          </View>
+        <View style={{ flex: 1, justifyContent: 'flex-end' }}>
+          <LogoContainer>
+            <Image resizeMode='cover' source={IPCsource} />
+          </LogoContainer>
 
-          <View
-            style={{ flex: 1, width: "100%", justifyContent: "space-evenly" }}
-          >
-            <Input text="Email" style={{ marginBottom: 10 }} fontsize="15px" />
-            <Input
-              text="Password"
-              style={{ marginBottom: 10 }}
-              fontsize="15px"
-            />
-          </View>
-          <View>
-            <Button
-              onPress={() => navigation.navigate("Test")}
-              text="Entrar"
-              fontSize="24px"
-            />
-          </View>
-        </Container2>
+          <Main>
+            <View>
+              <PreTitle>Bem-vindo a</PreTitle>
+              <Title>Cantinas IPC</Title>
+            </View>
+
+            <InputContainer>
+              <Input
+                title='Email'
+                style={{ marginBottom: 25 }}
+                fontsize='15px'
+                autoCorrect={false}
+                autoCapitalize='none'
+                autoCompleteType='email'
+                keyboardType='email-address'
+                textContentType='emailAddress'
+              />
+              <Input
+                title='Password'
+                style={{ marginBottom: 25 }}
+                fontsize='15px'
+                autoCorrect={false}
+                autoCapitalize='none'
+                autoCompleteType='password'
+                textContentType='password'
+                secureTextEntry={true}
+              />
+            </InputContainer>
+            <View>
+              <Button text='Entrar' fontSize='24px' />
+            </View>
+          </Main>
+        </View>
       </KeyboardAvoidingView>
     </Container>
   );
