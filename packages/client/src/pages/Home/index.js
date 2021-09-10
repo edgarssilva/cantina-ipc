@@ -5,6 +5,7 @@ import { Container } from './styles';
 const Home = ({ navigation }) => {
   return (
     <Container>
+      <StatusBar backgroundColor='white' style='dark' />
       <Button onPress={() => navigation.navigate('Login')} text='Reservar' fontSize='24px' />
     </Container>
   );
