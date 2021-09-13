@@ -17,8 +17,9 @@ export default function App() {
     Inter_400Regular,
     Inter_500Medium,
     Inter_600SemiBold,
+    Inter_700Bold,
   });
-  
+
   if (!fontsLoaded) return <Text>Loading...</Text>;
 
   return (
