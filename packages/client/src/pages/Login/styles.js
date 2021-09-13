@@ -9,7 +9,9 @@ export const Container = styled(SafeAreaView)`
 
 export const LogoContainer = styled.View`
   height: 35%;
-  padding: 5px 25px;
+  padding: 25px; /*Plus image padding*/
+  align-items: flex-start;
+  justify-content: flex-end;
 `;
 
 export const InputContainer = styled.View`

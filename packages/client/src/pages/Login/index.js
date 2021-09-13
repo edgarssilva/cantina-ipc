@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { Image, Text, View, KeyboardAvoidingView } from 'react-native';
+import { Image, View, KeyboardAvoidingView } from 'react-native';
 
 import { Container, LogoContainer, Main, InputContainer, PreTitle, Title } from './styles';
 
@@ -19,7 +19,7 @@ const Login = ({ navigation }) => {
       >
         <View style={{ flex: 1, justifyContent: 'flex-end' }}>
           <LogoContainer>
-            <Image resizeMode='cover' source={IPCsource} />
+            <Image resizeMode='contain' style={{ height: '90%', aspectRatio: 1.1257 }} source={IPCsource} />
           </LogoContainer>
 
           <Main>
