@@ -1,4 +1,5 @@
 import React from 'react';
+import { Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import {
   useFonts,
@@ -8,9 +9,8 @@ import {
   Inter_700Bold,
 } from '@expo-google-fonts/inter';
 
-import { Text } from 'react-native';
-
 import Routes from './src/routes';
+import { AuthProvier } from './src/contexts/auth';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -24,7 +24,9 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Routes />
+      <AuthProvier>
+        <Routes />
+      </AuthProvier>
     </NavigationContainer>
   );
 }

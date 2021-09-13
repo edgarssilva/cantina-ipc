@@ -7,8 +7,11 @@ import { Container, LogoContainer, Main, InputContainer, PreTitle, Title } from 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import IPCsource from '../../assets/ipclogo_white.png';
+import { useAuth } from '../../contexts/auth';
 
 const Login = ({ navigation }) => {
+  const { signIn } = useAuth();
+
   return (
     <Container>
       <StatusBar backgroundColor='#525ea6' style='light' />
@@ -51,13 +54,7 @@ const Login = ({ navigation }) => {
               />
             </InputContainer>
             <View>
-              <Button
-                text='Entrar'
-                fontSize='24px'
-                onPress={() => {
-                  navigation.navigate('Home');
-                }}
-              />
+              <Button text='Entrar' fontSize='24px' onPress={signIn} />
             </View>
           </Main>
         </View>
