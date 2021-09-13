@@ -1,7 +1,9 @@
 import React from 'react';
+import { StatusBar } from 'expo-status-bar';
 
 import Button from '../../components/Button';
 import Plate from '../../components/Plate';
+import MenuBar from '../../components/MenuBar';
 
 import { Container, PlateList, Reservation } from './styles';
 
