@@ -3,9 +3,9 @@ import { StatusBar } from 'expo-status-bar';
 
 import Button from '../../components/Button';
 import Plate from '../../components/Plate';
-import MenuBar from '../../components/MenuBar';
 
 import { Container, PlateList, Reservation } from './styles';
+import { useAuth } from '../../contexts/auth';
 
 const plates = [
   {
@@ -44,6 +44,8 @@ const plates = [
 ];
 
 const Home = ({ navigation }) => {
+  const { signOut } = useAuth();
+
   return (
     <Container>
       <StatusBar backgroundColor='white' style='dark' />
@@ -53,7 +55,7 @@ const Home = ({ navigation }) => {
         ))}
       </PlateList>
       <Reservation>
-        <Button onPress={() => navigation.navigate('Login')} text='Reservar' fontSize='24px' />
+        <Button onPress={signOut} text='Reservar' fontSize='24px' />
       </Reservation>
     </Container>
   );
