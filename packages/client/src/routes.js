@@ -1,25 +1,28 @@
 import React from 'react';
-import { View } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Home from './pages/Home';
 import Login from './pages/Login';
-import MenuBar from './components/MenuBar';
+import { useAuth } from './contexts/auth';
 
 const Stack = createNativeStackNavigator();
 
 const Routes = () => {
+  const { signed } = useAuth();
+
   return (
     <>
-      <MenuBar />
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}
-      >
-        <Stack.Screen name='Home' component={Home} />
-        <Stack.Screen name='Login' component={Login} />
-      </Stack.Navigator>
+      {signed ? (
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+          }}
+        >
+          <Stack.Screen name='Home' component={Home} />
+        </Stack.Navigator>
+      ) : (
+        <Login />
+      )}
     </>
   );
 };

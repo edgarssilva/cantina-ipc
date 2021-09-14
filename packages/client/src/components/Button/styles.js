@@ -6,6 +6,9 @@ export const ButtonContainer = styled.TouchableHighlight`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #525ea6;
 `;
 
 export const ButtonText = styled.Text`
@@ -13,7 +16,4 @@ export const ButtonText = styled.Text`
   font-size: ${(props) => props.fontSize || '30px'};
   text-align: center;
   font-family: 'Inter_600SemiBold';
-  background-color: #525ea6;
-  border-radius: 5px;
-  padding: 5px;
 `;
