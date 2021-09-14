@@ -3,6 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 
 import Button from '../../components/Button';
 import Plate from '../../components/Plate';
+import DaySlider from '../../components/DaySlider';
 
 import { Container, PlateList, Reservation } from './styles';
 import { useAuth } from '../../contexts/auth';
@@ -49,6 +50,7 @@ const Home = ({ navigation }) => {
   return (
     <Container>
       <StatusBar backgroundColor='white' style='dark' />
+      <DaySlider />
       <PlateList>
         {plates.map((p) => (
           <Plate key={p.id} plate={p} />

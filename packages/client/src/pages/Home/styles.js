@@ -6,10 +6,6 @@ export const Container = styled(SafeAreaView)`
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-
-  padding-top: 75px; /*Day Slider to be added*/
-
   margin: 0 25px;
 `;
 
