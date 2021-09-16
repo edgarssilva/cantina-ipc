@@ -10,7 +10,10 @@ export const Main = styled.View`
 
   display: flex;
   flex-direction: column;
-  margin: 0 25px;
+  margin: 0 20px;
+
+  padding-top: 5px;
+  padding-bottom: 30px;
 `;
 
 export const PlateList = styled.ScrollView`
@@ -18,6 +21,6 @@ export const PlateList = styled.ScrollView`
 `;
 
 export const Reservation = styled.View`
-  margin: 10px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  width: 100%;
 `;
