@@ -7,6 +7,7 @@ export const Container = styled.View`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  background-color: white;
 `;
 
 export const IPCLogo = styled.Image`
