@@ -2,7 +2,7 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { Image, View, KeyboardAvoidingView } from 'react-native';
 
-import { Container, LogoContainer, Main, InputContainer, PreTitle, Title } from './styles';
+import { Container, LogoContainer, Main, InputContainer, PreTitle, Title, BottomContainer } from './styles';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
@@ -33,8 +33,8 @@ const Login = ({ navigation }) => {
 
             <InputContainer>
               <Input
-                title='Email'
-                style={{ marginBottom: 25 }}
+                title='Utilizador'
+                style={{ marginBottom: 15 }}
                 fontsize='15px'
                 autoCorrect={false}
                 autoCapitalize='none'
@@ -43,8 +43,8 @@ const Login = ({ navigation }) => {
                 textContentType='emailAddress'
               />
               <Input
-                title='Password'
-                style={{ marginBottom: 25 }}
+                title='Palavra-chave'
+                style={{ marginBottom: 15 }}
                 fontsize='15px'
                 autoCorrect={false}
                 autoCapitalize='none'
@@ -53,9 +53,9 @@ const Login = ({ navigation }) => {
                 secureTextEntry={true}
               />
             </InputContainer>
-            <View>
+            <BottomContainer>
               <Button text='Entrar' fontSize='24px' onPress={signIn} />
-            </View>
+            </BottomContainer>
           </Main>
         </View>
       </KeyboardAvoidingView>

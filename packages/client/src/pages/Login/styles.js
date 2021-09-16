@@ -3,15 +3,16 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 export const Container = styled(SafeAreaView)`
   flex: 1;
-  overflow: hidden;
   background-color: #525ea6;
 `;
 
 export const LogoContainer = styled.View`
-  height: 35%;
-  padding: 25px; /*Plus image padding*/
+  max-height: 50%;
+  padding: 20px; /*Plus image padding*/
   align-items: flex-start;
   justify-content: flex-end;
+
+  margin-bottom: 10px;
 `;
 
 export const InputContainer = styled.View`
@@ -19,12 +20,12 @@ export const InputContainer = styled.View`
 `;
 
 export const Main = styled.View`
-  min-height: 65%;
+  min-height: 50%;
   flex-direction: column;
   justify-content: space-between;
 
-  padding: 25px;
-  padding-bottom: 40px;
+  padding: 20px;
+  padding-bottom: 30px;
   background-color: white;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -39,4 +40,8 @@ export const PreTitle = styled.Text`
 export const Title = styled.Text`
   font-size: 42px;
   font-family: Inter_700Bold;
+`;
+
+export const BottomContainer = styled.View`
+  margin-top: 5px;
 `;
