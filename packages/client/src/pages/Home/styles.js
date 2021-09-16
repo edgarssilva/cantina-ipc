@@ -3,6 +3,10 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 export const Container = styled(SafeAreaView)`
   flex: 1;
+`;
+
+export const Main = styled.View`
+  flex: 1;
 
   display: flex;
   flex-direction: column;

@@ -1,11 +1,12 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 
-import Button from '../../components/Button';
 import Plate from '../../components/Plate';
+import Button from '../../components/Button';
+import MenuBar from '../../components/MenuBar';
 import DaySlider from '../../components/DaySlider';
 
-import { Container, PlateList, Reservation } from './styles';
+import { Container, Main, PlateList, Reservation } from './styles';
 import { useAuth } from '../../contexts/auth';
 
 const plates = [
@@ -50,15 +51,18 @@ const Home = ({ navigation }) => {
   return (
     <Container>
       <StatusBar backgroundColor='white' style='dark' />
+      <MenuBar />
       <DaySlider />
-      <PlateList>
-        {plates.map((p) => (
-          <Plate key={p.id} plate={p} />
-        ))}
-      </PlateList>
-      <Reservation>
-        <Button onPress={signOut} text='Reservar' fontSize='24px' />
-      </Reservation>
+      <Main>
+        <PlateList>
+          {plates.map((p) => (
+            <Plate key={p.id} plate={p} />
+          ))}
+        </PlateList>
+        <Reservation>
+          <Button onPress={signOut} text='Reservar' fontSize='24px' />
+        </Reservation>
+      </Main>
     </Container>
   );
 };
